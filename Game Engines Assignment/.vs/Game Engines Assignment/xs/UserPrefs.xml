@@ -1,9 +1,8 @@
 ﻿<Properties StartupConfiguration="{2A0BA338-87F2-43F0-24B5-A900D6B501EE}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Grow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FractalTree.cs">
     <Files>
-      <File FileName="Assets/Scripts/FractalTree.cs" Line="19" Column="21" />
-      <File FileName="Assets/Scripts/Grow.cs" Line="7" Column="19" />
+      <File FileName="Assets/Scripts/FractalTree.cs" Line="17" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
