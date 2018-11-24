@@ -9,11 +9,12 @@ public class FractalTree : MonoBehaviour
 	public int branches = 2;
 
 	public float scale = .5f;
-	public float angle = 30;
+	float angle = 30;
 
 	// Use this for initialization
 	void Start()
 	{
+
 		sections -= 1;
 		for (int i = 0; i < branches; i++)
 		{
@@ -37,7 +38,8 @@ public class FractalTree : MonoBehaviour
 	public void Grown(int index)
 	{
 		gameObject.transform.position += transform.up * gameObject.transform.localScale.y;
-		gameObject.transform.rotation *= Quaternion.Euler(angle * ((index * 2) -1), 0, 0);
+		gameObject.transform.rotation *= Quaternion.Euler(Random.Range(25f, 60f) * ((index * 2) -1), Random.Range(25f, 90f), 0);
+		//gameObject.transform.rotation *= Quaternion.Euler(angle, 0, 0);
 		gameObject.transform.localScale *= scale;
 	}
 
