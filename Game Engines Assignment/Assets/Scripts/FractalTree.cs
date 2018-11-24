@@ -22,7 +22,7 @@ public class FractalTree : MonoBehaviour
 			{
 				var duplicate = Instantiate(gameObject);
 				var duplication = duplicate.GetComponent<FractalTree>();
-				//duplication.SendMessage("Grown");
+				duplication.GetComponentInChildren<Renderer>().material.color = Color.HSVToRGB(i / branches, 1, 1);
 				duplication.Grown(i);
 			}
 		}
