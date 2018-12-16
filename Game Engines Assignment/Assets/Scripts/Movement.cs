@@ -27,9 +27,10 @@ public class Movement : MonoBehaviour {
         float strafing = Input.GetAxis("Horizontal");
         Move(moving * speed * Time.deltaTime);
         Strafe(strafing * speed * Time.deltaTime);
-        mouseX = Input.GetAxis("MouseX");
-        mouseY = Input.GetAxis("MouseY");
-        LookX(mouseX * lookSpeed * Time.deltaTime);
+        mouseX = Input.GetAxis("Mouse X");
+        mouseY = Input.GetAxis("Mouse Y");
+        LookY(mouseX * lookSpeed * Time.deltaTime);
+        LookX(-mouseY * lookSpeed * Time.deltaTime);
 	}
 
     void Move(float units)

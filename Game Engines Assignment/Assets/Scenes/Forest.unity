@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 534669902}
   speed: 20
+  lookSpeed: 10
 --- !u!4 &169883462
 Transform:
   m_ObjectHideFlags: 0
