@@ -316,6 +316,7 @@
     <Compile Include="Assets\Scripts\Grow.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\PoissonDiscSampler.cs" />
+    <Compile Include="Assets\Scripts\Sampling.cs" />
     <Compile Include="Assets\Scripts\TreePlacement.cs" />
   </ItemGroup>
   <ItemGroup>
