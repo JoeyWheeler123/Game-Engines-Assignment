@@ -251,10 +251,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd84512b20c024471a80f2a25cfab0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  regionSize: {x: 1, y: 0, z: 1}
-  rejectionSamples: 30
-  displayRadius: 1
+  tree: {fileID: 1725950017741752, guid: 702aee76ffe624032b44e3dcfc2fd8ff, type: 2}
+  radius: 2
+  regionSize: {x: 50, y: 0, z: 50}
+  rejectionSamples: 10
+  displayRadius: 0.5
 --- !u!114 &308335778
 MonoBehaviour:
   m_ObjectHideFlags: 0

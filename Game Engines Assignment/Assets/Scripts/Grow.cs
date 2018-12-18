@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Grow : MonoBehaviour {
 
-    public float radius = 1;
+    //public GameObject tree;
+    float radius = 1;
     public Vector3 regionSize = Vector3.one;
     public int rejectionSamples = 30;
     public float displayRadius = 1;
 
     List<Vector3> points;
 
-    private void OnValidate()
+    private void OnEnable()
     {
         points = Sampling.Points(radius, regionSize, rejectionSamples);
     }
@@ -19,13 +20,26 @@ public class Grow : MonoBehaviour {
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(regionSize / 2, regionSize);
-        if(points != null)
+        if (points != null)
         {
-            foreach(Vector3 point in points)
+            foreach (Vector3 point in points)
             {
                 Gizmos.DrawWireSphere(point, displayRadius);
+                //Instantiate(tree, point, Quaternion.identity);
             }
         }
 
     }
+
+    /*private void spawnTrees()
+    {
+        Gizmos.DrawWireCube(regionSize / 2, regionSize);
+        if (points != null)
+        {
+            foreach (Vector3 point in points)
+            {
+                Instantiate(tree, point, Quaternion.identity);
+            }
+        }
+    }*/
 }
