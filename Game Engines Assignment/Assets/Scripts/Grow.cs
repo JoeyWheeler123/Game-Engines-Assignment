@@ -5,11 +5,11 @@ using UnityEngine;
 public class Grow : MonoBehaviour {
 
     public float radius = 1;
-    public Vector2 regionSize = Vector2.one;
+    public Vector3 regionSize = Vector3.one;
     public int rejectionSamples = 30;
     public float displayRadius = 1;
 
-    List<Vector2> points;
+    List<Vector3> points;
 
     private void OnValidate()
     {
@@ -21,7 +21,7 @@ public class Grow : MonoBehaviour {
         Gizmos.DrawWireCube(regionSize / 2, regionSize);
         if(points != null)
         {
-            foreach(Vector2 point in points)
+            foreach(Vector3 point in points)
             {
                 Gizmos.DrawWireSphere(point, displayRadius);
             }
