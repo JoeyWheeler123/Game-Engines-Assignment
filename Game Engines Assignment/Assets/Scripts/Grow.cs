@@ -5,7 +5,7 @@ using UnityEngine;
 public class Grow : MonoBehaviour {
 
     //public GameObject tree;
-    float radius = 1;
+    float radius = 3;
     public Vector3 regionSize = Vector3.one;
     public int rejectionSamples = 30;
     public float displayRadius = 1;
