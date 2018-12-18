@@ -72,8 +72,9 @@ public class Sampling : MonoBehaviour
 
                 }
             }
+            return true;
         }
-        return true;
+        return false;
     }
 
 }
