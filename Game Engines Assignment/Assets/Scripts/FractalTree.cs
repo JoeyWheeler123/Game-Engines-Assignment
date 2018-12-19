@@ -24,7 +24,7 @@ public class FractalTree : MonoBehaviour
 				var duplication = duplicate.GetComponent<FractalTree>();
                 //duplication.GetComponentInChildren<Renderer>().material.color = Color.HSVToRGB(i / branches, 1, 1);
                 transform.GetChild(0).GetComponent<Renderer>().material.color = Color.HSVToRGB(Random.Range(0, 1.0f), 1, 1);
-                transform.GetChild(1).GetComponent<Renderer>().material.color = Color.HSVToRGB(Random.Range(0, 1.0f), 1, 1);
+                //transform.GetChild(1).GetComponent<Renderer>().material.color = Color.HSVToRGB(Random.Range(0, 1.0f), 1, 1);
                 duplication.Grown(i);
 			}
 		}
