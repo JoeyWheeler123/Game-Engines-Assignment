@@ -4,54 +4,29 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
-    public GameObject mainCamera;
-    public float speed;
-    public float lookSpeed;
+    public float speed = 10.0f;
 
-	// Use this for initialization
-	void Start ()
+    void Start()
     {
-		if (mainCamera == null)
+        //Locks cursor to game screen
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void Update()
+    {
+        //Setting basic movement controls for forward and to the side
+        float translation = Input.GetAxis("Vertical") * speed;
+        float strafe = Input.GetAxis("Horizontal") * speed;
+        //Multyplying by time.delta for smoother movement 
+        translation *= Time.deltaTime;
+        strafe *= Time.deltaTime;
+        //Moving the transform of the gameobject with transform.translate 
+        transform.Translate(strafe, 0, translation);
+
+        //Pressing escape will unlock mouse cursor
+        if (Input.GetKeyDown("escape"))
         {
-            mainCamera = Camera.main.gameObject;
+            Cursor.lockState = CursorLockMode.None;
         }
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        //This is for keyboard and mouse control
-        float mouseX;
-        float mouseY;
-        float moving = Input.GetAxis("Vertical");
-        float strafing = Input.GetAxis("Horizontal");
-        Move(moving * speed * Time.deltaTime);
-        Strafe(strafing * speed * Time.deltaTime);
-        mouseX = Input.GetAxis("Mouse X");
-        mouseY = Input.GetAxis("Mouse Y");
-        LookY(mouseX * lookSpeed * Time.deltaTime);
-        LookX(-mouseY * lookSpeed * Time.deltaTime);
-	}
-
-    void Move(float units)
-    {
-        transform.position += mainCamera.transform.forward * units;
-    }
-
-    void Strafe(float units)
-    {
-        transform.position += mainCamera.transform.right * units;
-    }
-
-    void LookX(float degrees)
-    {
-        Quaternion rotate = Quaternion.AngleAxis(degrees, Vector3.forward);
-        transform.rotation = rotate * transform.rotation;
-    }
-
-    void LookY(float degrees)
-    {
-        Quaternion rotate = Quaternion.AngleAxis(degrees, Vector3.up);
-        transform.rotation = rotate * transform.rotation;
     }
 }

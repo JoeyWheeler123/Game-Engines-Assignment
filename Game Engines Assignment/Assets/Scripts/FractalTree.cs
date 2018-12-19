@@ -4,25 +4,29 @@ using UnityEngine;
 
 public class FractalTree : MonoBehaviour
 {
-
+    //Here I set how many sections of the tree I would like as well as how many branches
+    //(Note this affects performance heavily with regards to the mount of trees in the scene)
 	public int sections = 6;
+    //Controls the split in the tree
 	public int branches = 2;
 
 	public float scale = .5f;
-	//float angle = 30;
 
 	// Use this for initialization
 	void Start()
 	{
 
 		sections -= 1;
+        //Start a for loop the length of the branches int
 		for (int i = 0; i < branches; i++)
 		{
+            //Basic recursion
 			if (sections > 0)
 			{
+                //Constantly instatiate new branches unitl the loop is finished
 				var duplicate = Instantiate(gameObject);
 				var duplication = duplicate.GetComponent<FractalTree>();
-                //duplication.GetComponentInChildren<Renderer>().material.color = Color.HSVToRGB(i / branches, 1, 1);
+                //Coloring the branches here
                 transform.GetChild(0).GetComponent<Renderer>().material.color = Color.HSVToRGB(Random.Range(0, 1.0f), 1, 1);
                 transform.GetChild(1).GetComponent<Renderer>().material.color = Color.HSVToRGB(Random.Range(0, 1.0f), 1, 1);
                 duplication.Grown(i);
@@ -39,9 +43,11 @@ public class FractalTree : MonoBehaviour
 
 	public void Grown(int index)
 	{
+        //Here is the process in which each branch goes through before growing
 		gameObject.transform.position += transform.up * gameObject.transform.localScale.y;
+        //A randomish angle on each branch(not completely random for aesthtics)
 		gameObject.transform.rotation *= Quaternion.Euler(Random.Range(25f, 60f) * ((index * 2) -1), Random.Range(25f, 90f), 0);
-		//gameObject.transform.rotation *= Quaternion.Euler(angle, 0, 0);
+        //Constantly shortening the length of each branch
 		gameObject.transform.localScale *= scale;
 	}
 
