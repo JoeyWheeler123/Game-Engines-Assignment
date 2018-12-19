@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Grow : MonoBehaviour {
 
-    public GameObject tree;
+    public GameObject[] trees;
     float radius = 3;
     public Vector3 regionSize = Vector3.one;
     public int numSamples = 30;
@@ -19,7 +19,7 @@ public class Grow : MonoBehaviour {
         {
             foreach (Vector3 point in points)
             {
-                Instantiate(tree, point, Quaternion.identity);
+                Instantiate(trees[Random.Range(0, trees.GetLength(0))], point, Quaternion.identity);
             }
         }
     }

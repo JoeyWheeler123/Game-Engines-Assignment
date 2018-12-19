@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+[RequireComponent(typeof(AudioSource))]
 public class AudioPlayer : MonoBehaviour {
 
     AudioSource audioSource;
