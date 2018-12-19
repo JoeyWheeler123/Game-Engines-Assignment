@@ -19,7 +19,6 @@ public class Grow : MonoBehaviour {
         {
             foreach (Vector3 point in points)
             {
-                //Gizmos.DrawWireSphere(point, displayRadius);
                 Instantiate(tree, point, Quaternion.identity);
             }
         }
@@ -33,21 +32,9 @@ public class Grow : MonoBehaviour {
             foreach (Vector3 point in points)
             {
                 //Gizmos.DrawWireSphere(point, displayRadius);
-                Instantiate(tree, point, Quaternion.identity);
+
             }
         }
 
-    }
-
-    /*private void spawnTrees()
-    {
-        Gizmos.DrawWireCube(regionSize / 2, regionSize);
-        if (points != null)
-        {
-            foreach (Vector3 point in points)
-            {
-                Instantiate(tree, point, Quaternion.identity);
-            }
-        }
     }*/
 }
