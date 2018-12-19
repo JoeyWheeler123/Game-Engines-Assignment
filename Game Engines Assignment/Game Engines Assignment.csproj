@@ -312,6 +312,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AudioPlayer.cs" />
+    <Compile Include="Assets\Scripts\AudioVisual.cs" />
     <Compile Include="Assets\Scripts\FractalTree.cs" />
     <Compile Include="Assets\Scripts\Grow.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
