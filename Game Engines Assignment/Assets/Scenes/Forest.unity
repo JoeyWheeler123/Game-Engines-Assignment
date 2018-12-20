@@ -237,7 +237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &308335777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trees:
   - {fileID: 1725950017741752, guid: 702aee76ffe624032b44e3dcfc2fd8ff, type: 2}
-  regionSize: {x: 50, y: 0, z: 50}
+  regionSize: {x: 40, y: 0, z: 50}
   numSamples: 30
 --- !u!114 &308335778
 MonoBehaviour:
@@ -384,7 +384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &811664554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,7 +504,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1322067356
+--- !u!1001 &1088940916
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -546,7 +546,7 @@ Prefab:
     - target: {fileID: 114721178700717866, guid: 702aee76ffe624032b44e3dcfc2fd8ff,
         type: 2}
       propertyPath: sections
-      value: 9
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 702aee76ffe624032b44e3dcfc2fd8ff, type: 2}
