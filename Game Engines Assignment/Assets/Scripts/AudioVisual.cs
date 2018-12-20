@@ -5,21 +5,48 @@ using UnityEngine;
 
 public class AudioVisual : MonoBehaviour {
 
-    GameObject target;
-    public float maxScale = .5f;
+    public float range;
+    public float time;
+    public float speed;
+    public float rest;
+    private float lastValue;
+    private float value;
+    private float timer;
+    protected bool beat;
 
-	// Use this for initialization
-	void Start ()
+    //Virtual so that it can be overwritten
+    public virtual void OnUpdate()
     {
-        target = gameObject;
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		for(int i = 0; i < 512; i++)
+        lastValue = value;
+        value = AudioPlayer.specValue;
+
+        if(lastValue > range && value <= range)
         {
-            target.transform.localScale = new Vector3(.4f, .4f + AudioPlayer.samples[i] * maxScale, .4f);
+            if(timer > time)
+            {
+                OnBeat();
+            }
         }
-	}
+
+        if(lastValue <= range && value > range)
+        {
+            if(timer > time)
+            {
+                OnBeat();
+            }
+        }
+
+        timer += Time.deltaTime;
+    }
+
+    private void Update()
+    {
+        OnUpdate();
+    }
+
+    public virtual void OnBeat()
+    {
+        timer = 0;
+        beat = true;
+    }
 }

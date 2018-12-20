@@ -313,14 +313,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AudioPlayer.cs" />
+    <Compile Include="Assets\Scripts\AudioScale.cs" />
     <Compile Include="Assets\Scripts\AudioVisual.cs" />
     <Compile Include="Assets\Scripts\FractalTree.cs" />
     <Compile Include="Assets\Scripts\Grow.cs" />
     <Compile Include="Assets\Scripts\MouseCamera.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
-    <Compile Include="Assets\Scripts\PoissonDiscSampler.cs" />
     <Compile Include="Assets\Scripts\Sampling.cs" />
-    <Compile Include="Assets\Scripts\TreePlacement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />

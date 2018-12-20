@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33506775098475078}
   - component: {fileID: 23241296317259606}
   - component: {fileID: 65664541926100770}
+  - component: {fileID: 114682786536120726}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -40,6 +41,7 @@ GameObject:
   - component: {fileID: 33118245733359836}
   - component: {fileID: 23105820749141970}
   - component: {fileID: 135350289810738096}
+  - component: {fileID: 114943362396173530}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -70,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1725950017741752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.164}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4860085916155898}
@@ -200,6 +202,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114682786536120726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262432988186360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cade7ff196d44804e9e0102edab48894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 20
+  time: 0.0001
+  speed: 1000
+  rest: 0.1
+  maxScale: {x: 0.1, y: 0.8, z: 0.1}
+  minScale: {x: 0.06, y: 0.8, z: 0.06}
 --- !u!114 &114721178700717866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,6 +233,23 @@ MonoBehaviour:
   sections: 5
   branches: 2
   scale: 0.6666
+--- !u!114 &114943362396173530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1641312380681282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cade7ff196d44804e9e0102edab48894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 50
+  time: 0.2
+  speed: 25
+  rest: 0.1
+  maxScale: {x: 0.4, y: 0.4, z: 0.4}
+  minScale: {x: 0.2, y: 0.2, z: 0.2}
 --- !u!135 &135350289810738096
 SphereCollider:
   m_ObjectHideFlags: 1

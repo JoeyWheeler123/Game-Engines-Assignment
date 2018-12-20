@@ -1,27 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 
-[RequireComponent(typeof(AudioSource))]
 public class AudioPlayer : MonoBehaviour {
 
-    AudioSource audioSource;
+    public static float specValue { get; private set; }
 
-    public static float[] samples = new float[512];
+    private float[] audioSpectrum;
 
-    void Start()
+    private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSpectrum = new float[128];
     }
 
-    void Update()
+    private void Update()
     {
-        GetSpectrumAudioSource();
-    }
+        AudioListener.GetSpectrumData(audioSpectrum, 0, FFTWindow.Hamming);
 
-    void GetSpectrumAudioSource()
-    {
-        audioSource.GetSpectrumData(samples, 0, FFTWindow.Blackman);
+        if(audioSpectrum != null && audioSpectrum.Length > 0)
+        {
+            specValue = audioSpectrum[0] * 100;
+        }
     }
 }
