@@ -251,9 +251,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trees:
   - {fileID: 1725950017741752, guid: 702aee76ffe624032b44e3dcfc2fd8ff, type: 2}
+  - {fileID: 1555231223413988, guid: e7e136cbd2f9a914fbde2527ec9e14c4, type: 2}
   regionSize: {x: 40, y: 0, z: 40}
   numSamples: 30
-  displayRadius: 1
 --- !u!114 &308335778
 MonoBehaviour:
   m_ObjectHideFlags: 0
