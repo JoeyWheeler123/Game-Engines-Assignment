@@ -39,7 +39,7 @@ public class Sampling : MonoBehaviour
                 //Create a candidate point that's Radius is min value as it guaruntees point will spawn outside of the centre point
                 Vector3 candidate = spawnCentre + dir * Random.Range(radius, 2 * radius);
 
-                //If it is possible to spawn the candidate it will be added to the lis of points
+                //If it is possible to spawn the candidate it will be added to the list of points
                 if (isValid(candidate, sampleSize, cellSize, radius, points, grid))
                 {
                     points.Add(candidate);
