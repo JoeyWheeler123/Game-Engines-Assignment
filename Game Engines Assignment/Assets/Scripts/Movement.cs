@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour {
             Cursor.lockState = CursorLockMode.None;
         }
         //Simple fly implementation
-        if(Input.GetKey(KeyCode.E))
+        if(Input.GetKey(KeyCode.Space))
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
         }

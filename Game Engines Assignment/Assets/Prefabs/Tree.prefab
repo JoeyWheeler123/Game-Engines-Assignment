@@ -213,9 +213,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cade7ff196d44804e9e0102edab48894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
-  time: 0.0001
-  speed: 1000
+  range: 10
+  time: 0.1
+  speed: 50
   rest: 0.1
   maxScale: {x: 0.1, y: 0.8, z: 0.1}
   minScale: {x: 0.06, y: 0.8, z: 0.06}
@@ -244,11 +244,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cade7ff196d44804e9e0102edab48894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 50
+  range: 20
   time: 0.2
   speed: 25
   rest: 0.1
-  maxScale: {x: 0.4, y: 0.4, z: 0.4}
+  maxScale: {x: 0.45, y: 0.45, z: 0.45}
   minScale: {x: 0.2, y: 0.2, z: 0.2}
 --- !u!135 &135350289810738096
 SphereCollider:
